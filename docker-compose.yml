@@ -16,6 +16,21 @@ services:
       - 3000:3000
     networks:
       - internal
+  
+  database:
+    build: database
+    restart: always
+    expose:
+      - 5432
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - memodb:/var/lib/postgresql/data
+    networks:
+      - internal
+
+volumes:
+  memodb:
 
 networks:
   internal:

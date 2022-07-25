@@ -1,0 +1,10 @@
+{
+	"type": "postgres",
+	"host": "dababase",
+	"port": 5432,
+	"username": "root",
+	"password": "password",
+	"database": "tseet",
+	"entities": ["dist/**/*.entity{.ts,.js"],
+	"syncronize": true
+}
